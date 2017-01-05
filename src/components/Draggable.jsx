@@ -26,7 +26,7 @@ export default function(WrappedComponent) {
 
     handleMouseDown(e) {
       this.setState({
-        style: {...this.state.style, cursor: '-webkit-grabbing'},
+        style: {...this.state.style, cursor: '-webkit-grabbing', zIndex: 100},
         dragging: true,
         draggingStart: {
           left: e.pageX,
@@ -37,7 +37,7 @@ export default function(WrappedComponent) {
 
     handleMouseUp(e) {
       this.setState({
-        style: {...this.state.style, cursor: '-webkit-grab'},
+        style: {...this.state.style, cursor: '-webkit-grab', zIndex: 'auto'},
         dragging: false,
       });
     }
