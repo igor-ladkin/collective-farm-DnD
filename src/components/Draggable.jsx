@@ -25,8 +25,6 @@ export default function(WrappedComponent) {
     }
 
     handleMouseDown(e) {
-      const { top } = this.state.style
-
       this.setState({
         style: {...this.state.style, cursor: '-webkit-grabbing'},
         dragging: true,
